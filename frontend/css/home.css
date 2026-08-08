@@ -328,3 +328,243 @@ footer{
     height:60px;
     object-fit:contain;
 }
+
+@media (max-width: 768px) {
+
+    /* Prevent horizontal scrolling */
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Header logo */
+    .header-logo {
+        gap: 8px;
+        font-size: 18px;
+    }
+
+    .header-logo img {
+        width: 42px;
+        height: 42px;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 100vh;
+        height: auto;
+        padding: 80px 20px;
+        box-sizing: border-box;
+        background-position: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .hero-content h1,
+    .hero h1 {
+        font-size: 34px;
+        line-height: 1.2;
+        margin-bottom: 18px;
+    }
+
+    .hero-content p,
+    .hero p {
+        font-size: 17px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    /* Buttons */
+    .btn {
+        display: inline-block;
+        padding: 12px 22px;
+        font-size: 15px;
+        box-sizing: border-box;
+    }
+
+    .login-btn {
+        padding: 9px 16px;
+        font-size: 14px;
+    }
+
+    /* Features */
+    .features {
+        padding: 50px 20px;
+    }
+
+    .features h2 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        gap: 20px;
+    }
+
+    .feature-card {
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+    }
+
+    .feature-card img {
+        height: 210px;
+    }
+
+    .feature-card h3 {
+        font-size: 20px;
+    }
+
+    .feature-card p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    /* About */
+    .about {
+        padding: 50px 20px;
+    }
+
+    .about h2 {
+        font-size: 30px;
+    }
+
+    .about p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    /* Contact */
+    .contact {
+        padding: 45px 20px;
+    }
+
+    .contact h2 {
+        font-size: 28px;
+    }
+
+    .contact p {
+        font-size: 16px;
+        word-break: break-word;
+    }
+
+    /* Banner */
+    .banner {
+        padding: 25px 15px;
+    }
+
+    .banner img {
+        width: 100%;
+        height: auto;
+        max-height: 350px;
+    }
+
+    /* Advantages */
+    .advantages {
+        padding: 50px 20px;
+    }
+
+    .adv-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .adv-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* USP */
+    .usp {
+        padding: 50px 20px;
+    }
+
+    .usp-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .usp-card {
+        box-sizing: border-box;
+    }
+
+    /* Why Us */
+    .why-us {
+        padding: 50px 20px;
+    }
+
+    .why-us h2 {
+        font-size: 30px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-card {
+        box-sizing: border-box;
+    }
+
+    /* Section titles */
+    .section-title {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 20px 15px;
+        font-size: 14px;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    .header-logo {
+        font-size: 16px;
+    }
+
+    .header-logo img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .hero {
+        padding: 70px 15px;
+    }
+
+    .hero-content h1,
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p,
+    .hero p {
+        font-size: 15px;
+    }
+
+    .btn {
+        padding: 11px 18px;
+        font-size: 14px;
+    }
+
+    .features h2,
+    .about h2,
+    .why-us h2 {
+        font-size: 26px;
+    }
+
+    .contact h2 {
+        font-size: 25px;
+    }
+}
+
