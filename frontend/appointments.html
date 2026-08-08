@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Management</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="header-logo">
+        <img src="images/pcs-logo.jpeg">
+        <span>Pet Care Scheduler</span>
+    </div>
+</header>
+
+<div class="sidebar">
+
+    <div class="logo">
+    <img src="images/pcs-logo.jpeg" alt="PCS Logo">
+    <h2>PCS</h2>
+</div>
+
+    <a href="index.html">🏠 Dashboard</a>
+    <a href="profile.html">👤 Profile</a>
+    <a href="pets.html">🐶 Pets</a>
+    <a href="vaccinations.html">💉 Vaccinations</a>
+    <a href="medications.html">💊 Medications</a>
+    <a href="appointments.html" class="active">📅 Appointments</a>
+
+</div>
+
+<div class="main">
+
+    <h1>📅 Appointment Management</h1>
+
+    <div class="card summary-card">
+        <h3>Total Appointments</h3>
+        <p id="totalAppointments">0</p>
+    </div>
+
+    <form id="appointmentForm">
+
+        <input type="hidden" id="appointmentId">
+
+        <select id="pet_id" required>
+            <option value="">Select Pet</option>
+        </select>
+
+        <input
+            type="text"
+            id="doctor_name"
+            placeholder="Doctor Name"
+            required
+        >
+
+        <input
+            type="text"
+            id="clinic_name"
+            placeholder="Clinic Name"
+            required
+        >
+
+        <input
+            type="date"
+            id="appointment_date"
+            required
+        >
+
+        <input
+            type="time"
+            id="appointment_time"
+            required
+        >
+
+        <input
+            type="text"
+            id="purpose"
+            placeholder="Purpose"
+            required
+        >
+
+        <select id="status" required>
+    <option value="">Select Status</option>
+    <option value="Pending">Pending</option>
+    <option value="Completed">Completed</option>
+    <option value="Cancelled">Cancelled</option>
+</select>
+
+        <input
+            type="text"
+            id="notes"
+            placeholder="Notes"
+        >
+
+        <button type="submit">
+            ➕ Save Appointment
+        </button>
+
+    </form>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>ID</th>
+                <th>Pet ID</th>
+                <th>Pet Name</th>
+                <th>Doctor</th>
+                <th>Clinic</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Purpose</th>
+                <th>Status</th>
+                <th>notes</th>
+                <th>Action</th>
+            </tr>
+
+        </thead>
+
+        <tbody id="appointmentTable">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script src="js/appointments.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users - Pet Care Scheduler</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="header-logo">
+        <img src="images/pcs-logo.jpeg">
+        <span>Pet Care Scheduler</span>
+    </div>
+</header>
+
+<div class="sidebar">
+
+    <div class="logo">
+    <img src="images/pcs-logo.jpeg" alt="PCS Logo">
+    <h2>PCS</h2>
+</div>
+    <a href="index.html">🏠 Dashboard</a>
+   <a href="profile.html">👤 Profile</a>
+    <a href="pets.html">🐶 Pets</a>
+    <a href="vaccinations.html">💉 Vaccinations</a>
+    <a href="medications.html">💊 Medications</a>
+    <a href="appointments.html">📅 Appointments</a>
+
+</div>
+
+<div class="main">
+
+    <h1>👤 User Management</h1>
+
+    <div class="card summary-card">
+        <h3>Total Users</h3>
+        <p id="totalUsers">0</p>
+    </div>
+
+    <form id="userForm">
+
+        <input type="hidden" id="userId">
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter Full Name"
+            required
+        >
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter Email"
+            required
+        >
+
+        <input
+            type="text"
+            id="phone"
+            placeholder="Enter Phone Number"
+            required
+        >
+        <input type="password" id="password" placeholder="Enter Password" required>
+
+
+        <button type="submit" id="saveBtn">
+            ➕ Add User
+        </button>
+
+    </form>
+
+    <input
+        type="text"
+        id="searchUser"
+        placeholder="🔍 Search User..."
+    >
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody id="userTableBody">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script src="js/users.js"></script>
+
+</body>
+</html>

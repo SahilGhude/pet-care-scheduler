@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Management - Pet Care Scheduler</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+    <div class="header-logo">
+        <img src="images/pcs-logo.jpeg">
+        <span>Pet Care Scheduler</span>
+    </div>
+</header>
+    <div class="sidebar">
+
+        <div class="logo">
+    <img src="images/pcs-logo.jpeg" alt="PCS Logo">
+    <h2>PCS</h2>
+</div>
+
+        <a href="index.html">🏠 Dashboard</a>
+        <a href="profile.html">👤 Profile</a>
+        <a href="pets.html" class="active">🐶 Pets</a>
+        <a href="vaccinations.html">💉 Vaccinations</a>
+        <a href="medications.html">💊 Medications</a>
+        <a href="appointments.html">📅 Appointments</a>
+
+    </div>
+
+    <div class="main">
+
+        <h1>🐶 Pet Management</h1>
+
+        <div class="card summary-card">
+            <h3>Total Pets</h3>
+            <p id="totalPets">0</p>
+        </div>
+
+        <form id="petForm">
+
+            <input type="hidden" id="petId">
+
+           
+
+            <input
+                type="text"
+                id="pet_name"
+                placeholder="Pet Name"
+                required
+            >
+
+            <select id="species">
+
+    <option value="">
+        Select Species
+    </option>
+
+    <option value="Dog">
+        Dog
+    </option>
+
+    <option value="Cat">
+        Cat
+    </option>
+
+    <option value="Bird">
+        Bird
+    </option>
+
+    <option value="Rabbit">
+        Rabbit
+    </option>
+
+</select>
+
+            <input
+                type="text"
+                id="breed"
+                placeholder="Breed"
+                required
+            >
+
+           <select id="gender">
+
+    <option value="">
+        Select Gender
+    </option>
+
+    <option value="Male">
+        Male
+    </option>
+
+    <option value="Female">
+        Female
+    </option>
+
+</select>
+
+            <input
+                type="number"
+                id="age"
+                placeholder="Age"
+                required
+            >
+
+            <input
+                type="number"
+                step="0.01"
+                id="weight"
+                placeholder="Weight"
+                required
+            >
+            <label>Pet Photo</label>
+
+<input
+    type="file"
+    id="petPhoto"
+    accept="image/*">
+
+            <button type="submit">
+                ➕ Save Pet
+            </button>
+
+        </form>
+        <input
+    type="text"
+    id="searchPet"
+    placeholder="🔍 Search Pet"
+/>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Pet Name</th>
+                    <th>Species</th>
+                    <th>Breed</th>
+                    <th>Age</th>
+                    <th>Weight</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="petTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+   
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+ <script src="js/pets.js"></script>
+</body>
+</html>

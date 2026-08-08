@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Profile</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="main-content">
+
+    <h1>🐾 Pet Profile</h1>
+
+    <div class="profile-card">
+
+        <!-- Pet Header -->
+
+        <div class="pet-header">
+
+            <img
+id="petPhoto"
+class="pet-photo"
+src=""
+alt="Pet Photo">
+
+            <div class="pet-info">
+
+                <h2 id="petName"></h2>
+                <p><b>Pet ID:</b> <span id="petIdText"></span></p>
+
+<div class="health-score-card">
+
+    <h3>🏥 Health Score</h3>
+
+    <h2 id="healthScore">
+        0/100
+    </h2>
+<p id="healthMessage"></p>
+</div>
+                <p id="species"></p>
+
+                <div id="healthStatus" class="health-badge"></div>
+
+            </div>
+
+        </div>
+
+        <!-- Statistics Cards -->
+
+        <div class="pet-stats">
+
+            <div class="stat-card vaccine-card">
+
+                <h3>💉 Vaccinations</h3>
+
+                <p id="vaccinations">0</p>
+
+            </div>
+
+            <div class="stat-card medication-card">
+
+                <h3>💊 Medications</h3>
+
+                <p id="medications">0</p>
+
+            </div>
+
+            <div class="stat-card appointment-card">
+
+                <h3>📅 Appointments</h3>
+
+                <p id="appointments">0</p>
+
+            </div>
+
+        </div>
+
+        <!-- Pet Details -->
+
+        <div class="profile-section">
+
+            <h3>Pet Information</h3>
+
+            <p>
+                <b>Breed:</b>
+                <span id="breed"></span>
+            </p>
+
+            <p>
+                <b>Gender:</b>
+                <span id="gender"></span>
+            </p>
+
+            <p>
+                <b>Age:</b>
+                <span id="age"></span>
+            </p>
+
+            <p>
+                <b>Weight:</b>
+                <span id="weight"></span> kg
+            </p>
+
+        </div>
+
+        <!-- Vaccination History -->
+
+        <h3 class="history-title">
+            💉 Vaccination History
+        </h3>
+
+        <div id="vaccinationHistory"></div>
+
+        <!-- Medication History -->
+
+        <h3 class="history-title">
+            💊 Medication History
+        </h3>
+
+        <div id="medicationHistory"></div>
+
+        <!-- Appointment History -->
+
+        <h3 class="history-title">
+            📅 Appointment History
+        </h3>
+
+        <div id="appointmentHistory"></div>
+
+    </div>
+
+</div>
+
+<script src="js/pet-profile.js"></script>
+
+</body>
+</html>

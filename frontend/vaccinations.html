@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccination Management</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="header-logo">
+        <img src="images/pcs-logo.jpeg">
+        <span>Pet Care Scheduler</span>
+    </div>
+</header>
+
+<div class="sidebar">
+
+    <div class="logo">
+    <img src="images/pcs-logo.jpeg" alt="PCS Logo">
+    <h2>PCS</h2>
+</div>
+
+    <a href="index.html">🏠 Dashboard</a>
+    <a href="profile.html">👤 Profile</a>
+    <a href="pets.html">🐶 Pets</a>
+    <a href="vaccinations.html" class="active">💉 Vaccinations</a>
+    <a href="medications.html">💊 Medications</a>
+    <a href="appointments.html">📅 Appointments</a>
+
+</div>
+
+<div class="main">
+
+    <h1>💉 Vaccination Management</h1>
+
+    <div class="card summary-card">
+        <h3>Total Vaccinations</h3>
+        <p id="totalVaccinations">0</p>
+    </div>
+
+    <form id="vaccinationForm">
+
+    <input type="hidden" id="vaccinationId">
+
+    <select id="pet_id" required>
+        <option value="">
+            Select Pet
+        </option>
+    </select>
+
+    <input
+        type="text"
+        id="vaccine_name"
+        placeholder="Vaccine Name"
+        required
+    >
+
+    <input
+        type="date"
+        id="vaccination_date"
+        required
+    >
+
+    <input
+        type="date"
+        id="next_due_date"
+        required
+    >
+
+    <select id="status" required>
+        <option value="">Select Status</option>
+        <option value="Pending">Pending</option>
+        <option value="Completed">Completed</option>
+        <option value="Cancelled">Cancelled</option>
+    </select>
+
+    <input
+        type="text"
+        id="notes"
+        placeholder="Notes"
+    >
+
+    <button type="submit">
+        ➕ Save Vaccination
+    </button>
+
+</form>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>ID</th>
+                <th>Pet ID</th>
+                <th>Pet Name</th>
+                <th>Vaccine Name</th>
+                <th>Vaccination Date</th>
+                <th>Next Due Date</th>
+                <th>Status</th>
+                <th>notes</th>
+                <th>Action</th>
+            </tr>
+
+        </thead>
+
+        <tbody id="vaccinationTable">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script src="js/vaccinations.js"></script>
+
+</body>
+</html>

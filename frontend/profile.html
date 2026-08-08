@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Pet Care Scheduler</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="header-logo">
+        <img src="images/pcs-logo.jpeg">
+        <span>Pet Care Scheduler</span>
+    </div>
+</header>
+<div class="sidebar">
+
+    <div class="logo">
+    <img src="images/pcs-logo.jpeg" alt="PCS Logo">
+    <h2>PCS</h2>
+</div>
+    <a href="index.html">🏠 Dashboard</a>
+    <a href="profile.html" class="active">👤 Profile</a>
+
+    <a href="pets.html">🐶 Pets</a>
+    <a href="vaccinations.html">💉 Vaccinations</a>
+    <a href="medications.html">💊 Medications</a>
+    <a href="appointments.html">📅 Appointments</a>
+
+    <a href="#" onclick="logout()">
+        🚪 Logout
+    </a>
+
+</div>
+
+<div class="main">
+
+    <h1>👤 My Profile</h1>
+
+    <div class="profile-card">
+
+        <p>
+            <strong>ID:</strong>
+            <input
+                type="text"
+                id="userId"
+                disabled
+            >
+        </p>
+
+        <p>
+            <strong>Full Name:</strong>
+            <input
+                type="text"
+                id="fullName"
+                disabled
+            >
+        </p>
+
+        <p>
+            <strong>Email:</strong>
+            <input
+                type="email"
+                id="email"
+                disabled
+            >
+        </p>
+
+        <p>
+            <strong>Phone:</strong>
+            <input
+                type="text"
+                id="phone"
+                disabled
+            >
+        </p>
+        <div id="passwordSection" style="display:none;">
+
+    <label>Current Password:</label>
+
+    <input
+        type="password"
+        id="currentPassword"
+        placeholder="Enter Current Password"
+    >
+
+</div>
+
+        <br>
+
+       <button id="editBtn">
+    ✏️ Edit Profile
+</button>
+
+<button
+    id="saveBtn"
+    style="display:none;"
+>
+    💾 Save Changes
+</button>
+
+    </div>
+
+</div>
+
+<script src="js/profile.js"></script>
+
+</body>
+</html>

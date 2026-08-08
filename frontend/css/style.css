@@ -1,0 +1,908 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+}
+
+/* Header */
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:75px;
+    background:linear-gradient(
+        90deg,
+        #1e88e5,
+        #29b6f6
+    );
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 40px;
+
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.15);
+    z-index:1000;
+}
+/* Sidebar */
+
+.sidebar{
+    position:fixed;
+    top:75px;
+    left:0;
+    width:250px;
+    height:100%;
+    background:#1f2937;
+    overflow-y:auto;
+}
+
+.logo{
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:28px;
+}
+
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:15px 25px;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.sidebar a:hover{
+    background:#2563eb;
+}
+
+.sidebar .active{
+    background:#2563eb;
+}
+
+/* Main Content */
+
+.main,
+.main-content{
+    margin-left:250px;
+    margin-top:75px;
+    padding:30px;
+    min-height:100vh;
+}
+
+.main h1,
+.main-content h1{
+    margin-bottom:25px;
+    color:#111827;
+}
+
+/* Dashboard Cards */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#333;
+}
+
+.card p{
+    font-size:35px;
+    font-weight:bold;
+    color:#007bff;
+}
+
+.summary-card{
+    max-width:300px;
+    margin-bottom:20px;
+}
+
+/* Forms */
+
+form{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom:20px;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+/* Buttons */
+
+button{
+    background:#007bff;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+/* Search Box */
+
+#searchUser{
+    margin-bottom:15px;
+}
+
+/* Tables */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    border-radius:10px;
+    overflow:hidden;
+}
+
+th{
+    background:#007bff;
+    color:white;
+    padding:15px;
+}
+
+td{
+    padding:12px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+tr:hover{
+    background:#f5f5f5;
+}
+
+/* Action Buttons */
+
+td button{
+    margin:2px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+        top:0;
+    }
+
+    .main,
+    .main-content{
+        margin-left:0;
+        margin-top:20px;
+        padding:15px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+    }
+
+    header{
+        font-size:22px;
+    }
+}
+
+@media(max-width:500px){
+
+    .card h3{
+        font-size:18px;
+    }
+
+    .card p{
+        font-size:28px;
+    }
+
+    input,
+    button{
+        font-size:14px;
+    }
+}
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+/* Body */
+body{
+    background:#f4f6f9;
+}
+
+/* Header */
+
+.badge{
+    padding:6px 12px;
+    border-radius:20px;
+    color:white;
+    font-weight:bold;
+}
+
+.pending{
+    background:#f59e0b;
+}
+
+.completed{
+    background:#22c55e;
+}
+
+.cancelled{
+    background:#ef4444;
+}
+.card {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+.quick-actions{
+    margin-top:20px;
+    margin-bottom:30px;
+}
+
+.action-btn{
+    display:inline-block;
+    padding:12px 20px;
+    margin-right:10px;
+    background:#1877f2;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.action-btn:hover{
+    background:#0d5ed7;
+}
+
+.dashboard-table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.dashboard-table th{
+    background:#1877f2;
+    color:white;
+    padding:12px;
+}
+
+.dashboard-table td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+}
+
+footer{
+    text-align:center;
+    margin-top:30px;
+    padding:20px;
+    color:#666;
+}
+.login-container{
+    width:400px;
+    margin:100px auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.login-container h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.login-container button{
+    width:100%;
+}
+.welcome-user{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:20px;
+    font-size:18px;
+    font-weight:bold;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+.profile-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    max-width:500px;
+}
+
+.profile-card p{
+    font-size:18px;
+    margin:15px 0;
+}
+/* ===== Login Button ===== */
+
+.login-btn{
+    background:white;
+    color:#2563eb;
+    text-decoration:none;
+    padding:10px 20px;
+    border-radius:8px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.login-btn:hover{
+    background:#e2e8f0;
+}
+
+/* ===== Logout Button ===== */
+
+.logout-btn{
+    display:block;
+    background:#ef4444;
+    color:white !important;
+    margin:20px;
+    text-align:center;
+    border-radius:8px;
+}
+
+.logout-btn:hover{
+    background:#dc2626 !important;
+}
+
+/* ===== Welcome Box ===== */
+
+.welcome-box{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    margin-top:25px;
+    margin-bottom:25px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.welcome-box h2{
+    margin-bottom:10px;
+    color:#111827;
+}
+
+.welcome-box p{
+    color:#6b7280;
+    line-height:1.6;
+}
+
+/* ===== Dashboard Table ===== */
+
+.dashboard-table{
+    margin-top:20px;
+    width:100%;
+}
+
+.dashboard-table th{
+    background:#2563eb;
+}
+
+/* ===== Profile Card ===== */
+
+.profile-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    max-width:500px;
+}
+
+.profile-card p{
+    font-size:18px;
+    margin:15px 0;
+}
+
+/* ===== Better Login Page ===== */
+
+.login-container{
+    width:400px;
+    margin:120px auto;
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.login-container input{
+    margin-bottom:15px;
+}
+
+.login-container button{
+    width:100%;
+}
+.login-btn{
+    background:white;
+    color:#2563eb;
+    text-decoration:none;
+
+    padding:10px 20px;
+    border-radius:10px;
+
+    font-size:18px;
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+.login-btn:hover{
+    background:#f1f5f9;
+    transform:translateY(-2px);
+}
+.header-logo{
+    font-size:32px;
+    font-weight:bold;
+}
+/* FINAL LOGIN BUTTON FIX */
+
+.login-btn{
+    display:inline-block !important;
+
+    background:white !important;
+    color:#2563eb !important;
+
+    text-decoration:none !important;
+
+    padding:12px 25px !important;
+
+    border-radius:10px !important;
+
+    font-size:18px !important;
+    font-weight:bold !important;
+
+    border:none !important;
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.15) !important;
+
+    transition:0.3s !important;
+}
+
+.login-btn:hover{
+    background:#f1f5f9 !important;
+    color:#2563eb !important;
+}
+.header-logo{
+    font-size:32px;
+    font-weight:bold;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px;
+}
+
+.login-btn{
+    display:inline-block;
+    background:white;
+    color:#2563eb;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+}
+.view-btn{
+    background:#2563eb;
+    color:white;
+    margin-right:5px;
+}
+
+.view-btn:hover{
+    background:#1d4ed8;
+}
+.history-card{
+    background:#ffffff;
+    border-left:5px solid #2563eb;
+    padding:15px;
+    margin:10px 0;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.history-card b{
+    color:#2563eb;
+}
+/* =========================================
+   PET PROFILE PAGE UI
+========================================= */
+
+.profile-card{
+    background:#ffffff;
+    border-radius:20px;
+    padding:30px;
+    max-width:1000px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.pet-header{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    margin-bottom:25px;
+    padding-bottom:20px;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.pet-avatar{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #38bdf8
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:42px;
+    color:white;
+
+    box-shadow:0 5px 15px rgba(37,99,235,0.3);
+}
+
+.pet-info h2{
+    font-size:32px;
+    color:#111827;
+    margin-bottom:8px;
+}
+
+.pet-info p{
+    color:#6b7280;
+    font-size:16px;
+}
+
+/* PET STATS */
+
+.pet-stats{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:25px;
+    margin-bottom:25px;
+}
+
+.stat-card{
+    padding:25px;
+    border-radius:16px;
+    color:white;
+    text-align:center;
+    transition:0.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-5px);
+}
+
+.vaccine-card{
+    background:linear-gradient(
+        135deg,
+        #3b82f6,
+        #06b6d4
+    );
+}
+
+.medication-card{
+    background:linear-gradient(
+        135deg,
+        #10b981,
+        #22c55e
+    );
+}
+
+.appointment-card{
+    background:linear-gradient(
+        135deg,
+        #8b5cf6,
+        #a855f7
+    );
+}
+
+.stat-card h3{
+    margin-bottom:10px;
+    font-size:18px;
+}
+
+.stat-card p{
+    font-size:38px;
+    font-weight:bold;
+}
+
+/* PET DETAILS */
+
+.profile-section{
+    background:#f8fafc;
+    padding:25px;
+    border-radius:15px;
+    margin-top:20px;
+}
+
+.profile-section h3{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.profile-section p{
+    margin-bottom:12px;
+    font-size:17px;
+}
+
+/* HISTORY TITLES */
+
+.history-title{
+    margin-top:30px;
+    margin-bottom:15px;
+    color:#2563eb;
+    font-size:24px;
+}
+
+/* HISTORY CARDS */
+
+.history-card{
+    background:white;
+    border-left:5px solid #2563eb;
+    padding:18px;
+    margin-bottom:15px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.history-card b{
+    color:#2563eb;
+}
+
+.history-card:hover{
+    transform:translateX(5px);
+    transition:0.3s;
+}
+
+/* PET HEALTH STATUS */
+
+.health-badge{
+    display:inline-block;
+    padding:8px 15px;
+    border-radius:20px;
+    color:white;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.healthy{
+    background:#22c55e;
+}
+
+.warning{
+    background:#f59e0b;
+}
+
+.danger{
+    background:#ef4444;
+}
+.pet-photo{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #2563eb;
+}
+.logo{
+    text-align:center;
+    padding:20px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    margin-bottom:10px;
+}
+
+.logo h2{
+    color:white;
+}
+.header-logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.header-logo img{
+    width:55px;
+    height:55px;
+    object-fit:cover;
+    border-radius:50%;
+}
+.auth-logo{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.auth-logo img{
+    width:120px;
+    height:120px;
+    object-fit:contain;
+}
+
+.login-container h2{
+    text-align:center;
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+.login-container a{
+    display:block;
+    text-align:center;
+    margin-top:15px;
+    text-decoration:none;
+    color:#2563eb;
+    font-weight:bold;
+}
+.health-score-card{
+    background:linear-gradient(
+        135deg,
+        #22c55e,
+        #16a34a
+    );
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    margin:20px 0;
+
+    box-shadow:0 5px 15px rgba(
+        0,
+        0,
+        0,
+        0.15
+    );
+}
+
+.health-score-card h2{
+    font-size:40px;
+    margin-top:10px;
+}
+.health-badge{
+    display:inline-block;
+    padding:8px 15px;
+    background:#18e980;
+    color:white;
+    border-radius:20px;
+    font-weight:bold;
+    font-size:14px;
+}
+.health-badge{
+    display:inline-block;
+    background:#22c55e;
+    color:white;
+    padding:10px 20px;
+    border-radius:25px;
+    font-size:18px;
+    font-weight:bold;
+    margin-top:15px;
+}
+.pet-info{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+.health-badge{
+    display:inline-block;
+    padding:10px 20px;
+    border-radius:25px;
+    font-weight:bold;
+    margin-top:15px;
+    color:white;
+}
+
+#healthMessage{
+    margin-top:10px;
+    font-size:14px;
+    font-weight:bold;
+    color:#555;
+}
+
+.health-score-card{
+    background:#22c55e;
+    color:white;
+    padding:15px;
+    border-radius:15px;
+    margin:10px 0;
+    width:180px;
+    text-align:center;
+}
+.health-badge{
+    display:inline-block;
+    padding:10px 20px;
+    border-radius:25px;
+    font-weight:bold;
+    margin-top:10px;
+}
+#message{
+    margin:10px 0;
+    padding:10px;
+    border-radius:5px;
+}
+
+.error{
+    background:#f8d7da;
+    color:#721c24;
+}
+
+.success{
+    background:#d4edda;
+    color:#155724;
+}
