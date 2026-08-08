@@ -95,7 +95,7 @@ message.innerText =
                 setTimeout(() => {
 
     window.location.href =
-    "index.html";
+    "dashboard.html";
 
 }, 1000);
 
