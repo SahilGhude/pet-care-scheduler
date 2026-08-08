@@ -67,7 +67,7 @@ if(!email || !password){
 
         setTimeout(() => {
             window.location.href =
-                "index.html";
+                "dashboard.html";
         }, 1000);
 
     }

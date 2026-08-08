@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Care Scheduler Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="header-logo">
+        <img src="images/pcs-logo.jpeg">
+        <span>Pet Care Scheduler</span>
+    </div>
+</header>
+<div class="sidebar">
+
+    <div class="logo">
+    <img src="images/pcs-logo.jpeg" alt="PCS Logo">
+    <h2>PCS</h2>
+</div>
+
+    <a href="index.html" class="active">🏠 Dashboard</a>
+    <a href="profile.html">👤 Profile</a>
+
+    <a href="pets.html">🐶 Pets</a>
+    <a href="vaccinations.html">💉 Vaccinations</a>
+    <a href="medications.html">💊 Medications</a>
+    <a href="appointments.html">📅 Appointments</a>
+
+    <a href="#" onclick="logout()">
+        🚪 Logout
+    </a>
+
+</div>
+
+<div class="main">
+
+    <h1>🐾 Pet Care Scheduler Dashboard</h1>
+
+    <div class="welcome-user">
+        Welcome, <span id="userName"></span> 👋
+    </div>
+
+    <div class="cards">
+
+
+        <div class="card">
+            <h3>🐶 My Pets</h3>
+            <p id="totalPets">0</p>
+        </div>
+
+        <div class="card">
+            <h3>💉 Vaccinations</h3>
+            <p id="totalVaccinations">0</p>
+        </div>
+
+        <div class="card">
+            <h3>💊 Medications</h3>
+            <p id="totalMedications">0</p>
+        </div>
+
+        <div class="card">
+            <h3>📅 Appointments</h3>
+            <p id="totalAppointments">0</p>
+        </div>
+
+        <div class="card">
+            <h3>📅 Today's Appointments</h3>
+            <p id="todayAppointments">0</p>
+        </div>
+
+        <div class="card">
+            <h3>💉 Today's Vaccinations</h3>
+            <p id="todayVaccinations">0</p>
+        </div>
+
+        <div class="card">
+            <h3>⏰ Upcoming Appointments</h3>
+            <p id="upcomingAppointments">0</p>
+        </div>
+
+    </div>
+
+    <div class="quick-actions">
+
+    <a href="pets.html" class="action-btn">
+        ➕ Add Pet
+    </a>
+
+    <a href="vaccinations.html" class="action-btn">
+        💉 Add Vaccination
+    </a>
+
+    <a href="appointments.html" class="action-btn">
+        📅 Add Appointment
+    </a>
+
+</div>
+
+    <br><br>
+
+    <h2>📅 Recent Appointments</h2>
+
+    <table class="dashboard-table">
+
+        <thead>
+            <tr>
+                <th>Pet</th>
+                <th>Doctor</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+
+        <tbody id="recentAppointments">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>

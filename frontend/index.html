@@ -3,127 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Care Scheduler Dashboard</title>
+    <title>Pet Care Scheduler</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
-
 <body>
 
 <header>
+
     <div class="header-logo">
-        <img src="images/pcs-logo.jpeg">
-        <span>Pet Care Scheduler</span>
-    </div>
-</header>
-<div class="sidebar">
-
-    <div class="logo">
     <img src="images/pcs-logo.jpeg" alt="PCS Logo">
-    <h2>PCS</h2>
+    <span>Pet Care Scheduler</span>
 </div>
 
-    <a href="index.html" class="active">🏠 Dashboard</a>
-    <a href="profile.html">👤 Profile</a>
+    <a href="register.html" class="btn">
+    Register
+</a>
 
-    <a href="pets.html">🐶 Pets</a>
-    <a href="vaccinations.html">💉 Vaccinations</a>
-    <a href="medications.html">💊 Medications</a>
-    <a href="appointments.html">📅 Appointments</a>
-
-    <a href="#" onclick="logout()">
-        🚪 Logout
-    </a>
-
-</div>
-
-<div class="main">
-
-    <h1>🐾 Pet Care Scheduler Dashboard</h1>
-
-    <div class="welcome-user">
-        Welcome, <span id="userName"></span> 👋
-    </div>
-
-    <div class="cards">
+</header>
 
 
-        <div class="card">
-            <h3>🐶 My Pets</h3>
-            <p id="totalPets">0</p>
-        </div>
 
-        <div class="card">
-            <h3>💉 Vaccinations</h3>
-            <p id="totalVaccinations">0</p>
-        </div>
+<section class="hero">
 
-        <div class="card">
-            <h3>💊 Medications</h3>
-            <p id="totalMedications">0</p>
-        </div>
+    <div class="hero-content">
 
-        <div class="card">
-            <h3>📅 Appointments</h3>
-            <p id="totalAppointments">0</p>
-        </div>
+        <h1>
+           Welcome to Pet Care Scheduler
+        </h1>
 
-        <div class="card">
-            <h3>📅 Today's Appointments</h3>
-            <p id="todayAppointments">0</p>
-        </div>
+        <p>
+            Never miss vaccinations,
+            medications and pet appointments.
+        </p>
 
-        <div class="card">
-            <h3>💉 Today's Vaccinations</h3>
-            <p id="todayVaccinations">0</p>
-        </div>
-
-        <div class="card">
-            <h3>⏰ Upcoming Appointments</h3>
-            <p id="upcomingAppointments">0</p>
-        </div>
+        <a href="login.html" class="btn">
+            Get Started
+        </a>
 
     </div>
 
-    <div class="quick-actions">
+</section>
 
-    <a href="pets.html" class="action-btn">
-        ➕ Add Pet
-    </a>
+<section class="features">
+<h2 class="section-title">🐾 Our Features</h2>
 
-    <a href="vaccinations.html" class="action-btn">
-        💉 Add Vaccination
-    </a>
+<div class="feature-grid">
 
-    <a href="appointments.html" class="action-btn">
-        📅 Add Appointment
-    </a>
+<div class="feature-card">
+<img src="images/pet-management.jpg">
+<h3>Pet Management</h3>
+<p>Store complete pet information.</p>
+</div>
+
+<div class="feature-card">
+<img src="images/vaccination.jpg">
+<h3>Vaccination Tracking</h3>
+<p>Never miss vaccine due dates.</p>
+</div>
+
+<div class="feature-card">
+<img src="images/medication.jpg">
+<h3>Medication Records</h3>
+<p>Track medicines and dosage.</p>
+</div>
+
+<div class="feature-card">
+<img src="images/appointment.jpg">
+<h3>Vet Appointments</h3>
+<p>Schedule appointments easily.</p>
+</div>
 
 </div>
 
-    <br><br>
+</section>
+<section class="why-us">
 
-    <h2>📅 Recent Appointments</h2>
+<h2>Why Choose Pet Care Scheduler?</h2>
 
-    <table class="dashboard-table">
+<div class="why-grid">
 
-        <thead>
-            <tr>
-                <th>Pet</th>
-                <th>Doctor</th>
-                <th>Date</th>
-            </tr>
-        </thead>
+<div class="why-card">
+<h3>📷 Pet Profiles</h3>
+<p>
+Store pet photos and complete records.
+</p>
+</div>
 
-        <tbody id="recentAppointments">
+<div class="why-card">
+<h3>💉 Vaccine Tracking</h3>
+<p>
+Never miss important vaccinations.
+</p>
+</div>
 
-        </tbody>
+<div class="why-card">
+<h3>💊 Medication History</h3>
+<p>
+Keep all medicine records in one place.
+</p>
+</div>
 
-    </table>
+<div class="why-card">
+<h3>📅 Appointment Scheduling</h3>
+<p>
+Track upcoming vet visits.
+</p>
+</div>
 
 </div>
 
-<script src="js/dashboard.js"></script>
+</section>
+<section class="about">
+
+    <h2>About Pet Care Scheduler</h2>
+
+    <p>
+        Pet Care Scheduler helps pet owners
+        organize vaccinations, medications,
+        and appointments from a single
+        platform.
+    </p>
+
+</section>
+
+<section class="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>
+        Email:
+        petcarescheduler4@gmail.com
+    </p>
+
+</section>
+
+<footer>
+    © 2026 Pet Care Scheduler |
+    Developed by Sahil Ghude
+</footer>
+
+<script src="js/home.js"></script>
 
 </body>
 </html>
