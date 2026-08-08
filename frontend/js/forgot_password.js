@@ -7,7 +7,7 @@ async function sendOTP() {
         document.getElementById("message");
 
     const response = await fetch(
-        `http://127.0.0.1:8000/users/forgot-password?email=${email}`,
+        `https://pet-care-scheduler-avpb.onrender.com/users/forgot-password?email=${email}`,
         {
             method: "POST"
         }
@@ -31,7 +31,7 @@ async function verifyOTP() {
         document.getElementById("message");
 
     const response = await fetch(
-        `http://127.0.0.1:8000/users/verify-otp?email=${email}&otp=${otp}`,
+        `https://pet-care-scheduler-avpb.onrender.com/users/verify-otp?email=${email}&otp=${otp}`,
         {
             method: "POST"
         }
@@ -67,7 +67,7 @@ async function resetPassword() {
         document.getElementById("message");
 
     const response = await fetch(
-        `http://127.0.0.1:8000/users/reset-password?email=${email}&new_password=${new_password}`,
+        `https://pet-care-scheduler-avpb.onrender.com/users/reset-password?email=${email}&new_password=${new_password}`,
         {
             method: "POST"
         }

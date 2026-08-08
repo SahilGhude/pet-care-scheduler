@@ -11,7 +11,7 @@ async function loadPet() {
     // Pet Profile
     const response =
     await fetch(
-        "http://127.0.0.1:8000/pets/profile/" +
+        "https://pet-care-scheduler-avpb.onrender.com/pets/profile/" +
         petId
     );
 
@@ -168,7 +168,7 @@ else {
 }
     const historyResponse =
     await fetch(
-        "http://127.0.0.1:8000/pets/" +
+        "https://pet-care-scheduler-avpb.onrender.com/pets/" +
         petId +
         "/history"
     );

@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000/users";
+const API_URL = "https://pet-care-scheduler-avpb.onrender.com/users";
 
 async function getUsers() {
 

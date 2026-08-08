@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000/vaccinations";
+const API_URL = "https://pet-care-scheduler-avpb.onrender.com/vaccinations";
 async function loadPets() {
 
     const userId =
@@ -6,7 +6,7 @@ async function loadPets() {
 
     const response =
         await fetch(
-            "http://127.0.0.1:8000/pets/user/" +
+            "https://pet-care-scheduler-avpb.onrender.com/pets/user/" +
             userId
         );
 

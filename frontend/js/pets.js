@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000/pets";
+const API_URL = "https://pet-care-scheduler-avpb.onrender.com/pets";
 
 const SUPABASE_URL =
 "https://foobtedfwjvpfbmrozou.supabase.co";

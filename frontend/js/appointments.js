@@ -1,5 +1,5 @@
-const API_URL = "http://127.0.0.1:8000/appointments";
-const PET_API = "http://127.0.0.1:8000/pets";
+const API_URL = "https://pet-care-scheduler-avpb.onrender.com/appointments";
+const PET_API = "https://pet-care-scheduler-avpb.onrender.com/pets";
 
 
 async function loadPets() {
@@ -9,7 +9,7 @@ async function loadPets() {
 
     const response =
         await fetch(
-            "http://127.0.0.1:8000/pets/user/" +
+            "https://pet-care-scheduler-avpb.onrender.com/pets/user/" +
             userId
         );
 

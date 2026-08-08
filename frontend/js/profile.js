@@ -15,7 +15,7 @@ async function loadProfile() {
 
         const response =
             await fetch(
-                "http://127.0.0.1:8000/users/" +
+                "https://pet-care-scheduler-avpb.onrender.com/users/" +
                 userId
             );
 
@@ -117,7 +117,7 @@ document.getElementById(
 
             const response =
                 await fetch(
-                    "http://127.0.0.1:8000/users/" +
+                    "https://pet-care-scheduler-avpb.onrender.com/users/" +
                     userId,
                     {
                         method: "PUT",

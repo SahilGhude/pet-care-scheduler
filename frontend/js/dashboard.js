@@ -24,16 +24,16 @@ document.addEventListener(
 );
 
 const PET_API =
-    "http://127.0.0.1:8000/pets";
+    "https://pet-care-scheduler-avpb.onrender.com/pets";
 
 const VACCINATION_API =
-    "http://127.0.0.1:8000/vaccinations";
+    "https://pet-care-scheduler-avpb.onrender.com/vaccinations";
 
 const MEDICATION_API =
-    "http://127.0.0.1:8000/medications";
+    "https://pet-care-scheduler-avpb.onrender.com/medications";
 
 const APPOINTMENT_API =
-    "http://127.0.0.1:8000/appointments";
+    "https://pet-care-scheduler-avpb.onrender.com/appointments";
 
 async function loadDashboard() {
 
