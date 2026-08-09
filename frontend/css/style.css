@@ -906,3 +906,98 @@ header{
     background:#d4edda;
     color:#155724;
 }
+/* Mobile Responsive */
+
+@media screen and (max-width: 768px){
+
+    header{
+        padding: 0 15px;
+        font-size: 18px;
+    }
+
+    .header-logo{
+        font-size: 20px;
+    }
+
+    .header-logo img{
+        width:40px;
+        height:40px;
+    }
+
+    .sidebar{
+        width:100%;
+        position:relative;
+        top:0;
+        height:auto;
+    }
+
+    .main,
+    .main-content{
+        margin-left:0;
+        margin-top:20px;
+        padding:15px;
+    }
+
+    .cards,
+    .pet-stats{
+        grid-template-columns:1fr;
+    }
+
+    .login-container{
+        width:95%;
+        margin:30px auto;
+    }
+
+    .profile-card{
+        padding:15px;
+    }
+
+    .pet-header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .pet-avatar,
+    .pet-photo{
+        width:80px;
+        height:80px;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+    input,
+    select,
+    textarea,
+    button{
+        width:100%;
+    }
+
+    .action-btn{
+        display:block;
+        margin:10px 0;
+        text-align:center;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    .card p{
+        font-size:24px;
+    }
+
+    .pet-info h2{
+        font-size:24px;
+    }
+
+    .stat-card p{
+        font-size:28px;
+    }
+
+    .logo h2{
+        font-size:18px;
+    }
+}
