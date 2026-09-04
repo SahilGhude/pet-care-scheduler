@@ -1,33 +1,37 @@
-from fastapi_mail import FastMail, MessageSchema, ConnectionConfig
+from brevo import AsyncBrevo
+from brevo.transactional_emails import (
+    SendTransacEmailRequestSender,
+    SendTransacEmailRequestToItem,
+)
 from pydantic import EmailStr
 from dotenv import load_dotenv
 import os
 
 load_dotenv()
 
-conf = ConnectionConfig(
-    MAIL_USERNAME=os.getenv("MAIL_USERNAME"),
-    MAIL_PASSWORD=os.getenv("MAIL_PASSWORD"),
-    MAIL_FROM=os.getenv("MAIL_FROM"),
-    MAIL_PORT=int(os.getenv("MAIL_PORT")),
-    MAIL_SERVER=os.getenv("MAIL_SERVER"),
-    MAIL_STARTTLS=True,
-    MAIL_SSL_TLS=False,
-    USE_CREDENTIALS=True
-)
+BREVO_API_KEY = os.getenv("BREVO_API_KEY")
+MAIL_FROM = os.getenv("MAIL_FROM")
+
+client = AsyncBrevo(api_key=BREVO_API_KEY)
+
 
 async def send_email(
     email: EmailStr,
     subject: str,
     body: str
 ):
-    message = MessageSchema(
+    result = await client.transactional_emails.send_transac_email(
         subject=subject,
-        recipients=[email],
-        body=body,
-        subtype="plain"
+        text_content=body,
+        sender=SendTransacEmailRequestSender(
+            email=MAIL_FROM,
+            name="Pet Care Scheduler"
+        ),
+        to=[
+            SendTransacEmailRequestToItem(
+                email=str(email)
+            )
+        ]
     )
 
-    fm = FastMail(conf)
-
-    await fm.send_message(message)
+    print("Email sent successfully:", result.message_id)
