@@ -28,3 +28,7 @@ class UserUpdate(BaseModel):
     email: str
     phone: str
     password: str
+
+class ResetPassword(BaseModel):
+    email: EmailStr
+    new_password: str

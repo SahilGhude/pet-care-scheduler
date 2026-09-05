@@ -67,9 +67,16 @@ async function resetPassword() {
         document.getElementById("message");
 
     const response = await fetch(
-        `https://pet-care-scheduler-avpb.onrender.com/users/reset-password?email=${email}&new_password=${new_password}`,
+        "https://pet-care-scheduler-avpb.onrender.com/users/reset-password",
         {
-            method: "POST"
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                email: email,
+                new_password: new_password
+            })
         }
     );
 

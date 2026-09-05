@@ -7,7 +7,8 @@ from app.schemas.user_schema import (
     UserCreate,
     UserResponse,
     UserUpdate,
-    UserLogin
+    UserLogin,
+    ResetPassword
 )
 import asyncio
 import random
@@ -215,13 +216,12 @@ def verify_otp(
     }
 @router.post("/reset-password")
 def reset_password(
-    email: str,
-    new_password: str,
+    data: ResetPassword,
     db: Session = Depends(get_db)
 ):
 
     user = db.query(User).filter(
-        User.email == email
+        User.email == data.email
     ).first()
 
     if user is None:
@@ -230,9 +230,10 @@ def reset_password(
             detail="User not found"
         )
 
-    user.password = new_password
+    user.password = data.new_password
 
     db.commit()
+    db.refresh(user)
 
     return {
         "message": "Password Updated"
