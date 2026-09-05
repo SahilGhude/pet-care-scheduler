@@ -10,7 +10,6 @@ from app.schemas.user_schema import (
     UserLogin,
     ResetPassword
 )
-import asyncio
 import random
 from app.utils.otp_store import otp_storage
 from app.utils.email_service import send_email
@@ -154,8 +153,9 @@ def delete_user(
     return {
         "message": "User deleted successfully"
     }
+
 @router.post("/forgot-password")
-def forgot_password(
+async def forgot_password(
     email: str,
     db: Session = Depends(get_db)
 ):
@@ -176,10 +176,7 @@ def forgot_password(
 
     otp_storage[email] = otp
 
-    
-
-    asyncio.run(
-        send_email(
+    await send_email(
         email=email,
         subject="Pet Care Scheduler Password Reset",
         body=f"""
@@ -194,11 +191,12 @@ Do not share this OTP with anyone.
 Pet Care Scheduler Team
 """
     )
-    )
 
     return {
         "message": "OTP Sent"
     }
+
+
 @router.post("/verify-otp")
 def verify_otp(
     email: str,
